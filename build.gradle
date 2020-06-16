@@ -12,3 +12,12 @@ repositories {
 dependencies {
     compile 'junit:junit:4.12'
 }
+jar {
+    manifest {
+        attributes "Main-Class": "nameListGradleExample"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

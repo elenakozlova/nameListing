@@ -46,6 +46,7 @@ public class nameListGradleExample {
     people.add(new Person("Olga", "F", 14));
     people.add(new Person("Tracy", "F", 17));
     people.add(new Person("Alex", "M", 10));
+    //people.add(new Person("Shakira", "F", 35));
   }
 
   public static void printMenu() {
