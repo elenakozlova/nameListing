@@ -7,15 +7,7 @@ public class nameListGradleExample {
     public static void main(String[] args) {
         int input;
         boolean processInput = true;
-
-        people.add(new Person("Alex", "M", 15));
-        people.add(new Person("Helen", "F", 25));
-        people.add(new Person("Nikita", "F", 45));
-        people.add(new Person("Trisha", "F", 35));
-        people.add(new Person("Paul", "M", 12));
-        people.add(new Person("Olga", "F", 14));
-        people.add(new Person("Tracy", "F", 17));
-        people.add(new Person("Alex", "M", 10));
+        addDefaultUsers();
 
         while (processInput) {
             printMenu();
@@ -45,6 +37,17 @@ public class nameListGradleExample {
         System.exit(0);
     }
 
+    public static void addDefaultUsers() {
+        people.add(new Person("Alex", "M", 15));
+        people.add(new Person("Helen", "F", 25));
+        people.add(new Person("Nikita", "F", 45));
+        people.add(new Person("Trisha", "F", 35));
+        people.add(new Person("Paul", "M", 12));
+        people.add(new Person("Olga", "F", 14));
+        people.add(new Person("Tracy", "F", 17));
+        people.add(new Person("Alex", "M", 10));
+    }
+
     public static void printMenu() {
         System.out.println("---------------------------------");
         System.out.println("-   Main Menu                   -");
@@ -56,7 +59,7 @@ public class nameListGradleExample {
 
     public static void addPerson() {
         System.out.println("Enter Name:");
-        var name = scanner.next();
+        String name = scanner.next();
         System.out.println("Age:");
         int age = scanner.nextInt();
         System.out.println("Gender  M|F:");

@@ -29,4 +29,8 @@ public class Person {
         this.gender = gender;
         this.age = age;
     }
+
+    public static void main(String[] args) {
+        System.out.println("second main - should not run ");
+    }
 }
