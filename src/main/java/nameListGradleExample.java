@@ -1,17 +1,31 @@
+
 import java.util.*;
 
 public class nameListGradleExample {
   public static List<Person> people = new LinkedList<>();
-  public static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
     int input;
     boolean processInput = true;
     addDefaultUsers();
 
+
+
     while (processInput) {
       printMenu();
-      input = scanner.nextInt();
+      System.out.println("aaaa");
+      try {
+
+        var in = scanner.next();
+      } catch (NoSuchElementException e) {
+        e.printStackTrace();
+      }
+
+//      System.out.println(/ /in);
+//      input = Integer.parseInt(in);
+
       switch (input) {
         case 1:
           addPerson();
@@ -29,6 +43,7 @@ public class nameListGradleExample {
         case 0:
           System.out.println("See Ya");
           processInput = false;
+          break;
         default:
           System.out.println("Invalid input");
           break;
@@ -59,6 +74,7 @@ public class nameListGradleExample {
   }
 
   public static void addPerson() {
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter Name:");
     String name = scanner.next();
     System.out.println("Age:");
