@@ -44,7 +44,6 @@ public class nameListGradleExample {
   }
 
   public static void addDefaultUsers() {
-    new Thread(()-> System.out.println("test lambda"))   ;
     people.add(new Person("Alex", "M", 15));
     people.add(new Person("Helen", "F", 25));
     people.add(new Person("Nikita", "F", 45));
